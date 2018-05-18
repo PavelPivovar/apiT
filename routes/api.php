@@ -9,7 +9,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::apiResource('/task', 'TaskController');
-Route::group(['prefix' => 'task'], function (){
-    Route::apiResource('/{task}reviews', 'ReviewController');
-});
-
+ 

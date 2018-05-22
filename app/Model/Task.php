@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Task extends Model
 {
+    protected $fillable = ['title', 'body'];
+
     public function reviews(){
         return $this->hasMany(Task::class);
     }
